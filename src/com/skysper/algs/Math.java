@@ -1,5 +1,8 @@
 package com.skysper.algs;
 
+/**
+ * @author skysper
+ */
 public class Math {
     public static int abs(int x) {
         if (x < 0) {
@@ -81,6 +84,25 @@ public class Math {
             sum += 1.0 / i;
         }
         return sum;
+    }
+
+    /**
+     * 最大公约数
+     * a = kb + r => r = a- kb
+     * 假设 c 为 a/b 最大公约数 a = mc; b = nc;
+     * 则 r = mc - knc = (m-kn)c;
+     * 故 c 为 b/r 最大公约数
+     * @param a
+     * @param b
+     * @return
+     */
+    public static int gcd(int a, int b) {
+        int mod = a % b;
+        if(mod == 0) {
+            return b;
+        } else {
+            return gcd(b, mod);
+        }
     }
 
 }

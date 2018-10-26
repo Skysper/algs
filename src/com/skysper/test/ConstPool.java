@@ -1,7 +1,7 @@
 package com.skysper.test;
 
 /**
- * @author wupengfei
+ * @author skysper
  */
 public class ConstPool {
     public static  final  int TEN_MILLION = 10_000_000;

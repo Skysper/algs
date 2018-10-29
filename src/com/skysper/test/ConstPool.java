@@ -10,4 +10,6 @@ public class ConstPool {
     public static final  int HUNDRED_THOUSAND = 100_000;
     public static final int TEN_THOUSAND = 10_000;
     public static final  int ONE_THOUSAND = 1_000;
+    public static final int TEN = 10;
+    public static final int HUNDRED = 100;
 }

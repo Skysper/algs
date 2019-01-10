@@ -1,12 +1,10 @@
 package com.skysper.algs;
 
-import com.skysper.util.In;
 import com.skysper.util.Printer;
 
-import java.io.PrintWriter;
 
 /**
- * @author wupengfei
+ * @author skysper
  */
 public class BinarySearch {
     /**

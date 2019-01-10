@@ -4,7 +4,7 @@ import java.util.Random;
 
 /**
  * see at #link https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle#Sattolo's_algorithm
- * @author wupengfei
+ * @author skysper
  */
 public class Sattolo {
 

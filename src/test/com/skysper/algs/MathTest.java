@@ -1,6 +1,6 @@
-package com.skysper.test;
+package com.skysper.algs;
 
-import com.skysper.algs.Math;
+import com.skysper.ConstPool;
 
 /**
  * @author skysper

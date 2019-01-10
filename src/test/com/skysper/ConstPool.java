@@ -1,4 +1,4 @@
-package com.skysper.test;
+package com.skysper;
 
 /**
  * @author skysper

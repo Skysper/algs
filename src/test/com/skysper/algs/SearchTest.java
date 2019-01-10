@@ -1,4 +1,4 @@
-package com.skysper.test;
+package com.skysper.algs;
 
 import com.skysper.algs.BinarySearch;
 import com.skysper.util.Printer;

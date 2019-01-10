@@ -9,10 +9,11 @@ import java.util.Random;
 public class Sattolo {
 
     public static void shuffle(Object[] original) {
+        Random random = new Random();
         int i = original.length;
         while(i > 1) {
             i = i - 1;
-            int j = new Random().nextInt(i);
+            int j = random.nextInt(i);
             Object temp = original[j];
             original[j] = original[i];
             original[i] = temp;

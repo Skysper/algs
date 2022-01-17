@@ -1,4 +1,4 @@
-package com.skysper;
+package com.skysper.offer;
 
 import java.util.Deque;
 import java.util.LinkedList;

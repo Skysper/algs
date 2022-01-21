@@ -19,7 +19,7 @@ package com.skysper.leetcode;
  * @author skysper
  * @date 2022-01-18 22:15
  */
-public class lps_5 {
+public class LPS_5 {
     //manacher算法
     public String longestPalindrome(String s) {
         if(s == null || s.length() == 0) {

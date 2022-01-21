@@ -1,5 +1,6 @@
 package com.skysper.util;
 
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -7,6 +8,15 @@ import java.util.concurrent.TimeUnit;
  * @author wupengfei
  */
 public class Printer {
+
+    public static void printArray(List array) {
+        System.out.print("[");
+        for (Object item : array) {
+            System.out.print(item);
+            System.out.print(" ");
+        }
+        System.out.println("]");
+    }
 
     public static void printArray(Object[] array) {
         System.out.print("[");

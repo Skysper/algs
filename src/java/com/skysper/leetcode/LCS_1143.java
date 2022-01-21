@@ -21,7 +21,7 @@ package com.skysper.leetcode;
  * @author skysper
  * @date 2022-01-18 23:06
  */
-public class lcs_1143 {
+public class LCS_1143 {
     public int longestCommonSubsequence(String text1, String text2) {
         char[] str1 = text1.toCharArray();
         char[] str2 = text2.toCharArray();

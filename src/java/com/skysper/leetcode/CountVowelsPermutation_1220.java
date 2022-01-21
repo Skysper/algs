@@ -19,7 +19,7 @@ package com.skysper.leetcode;
  * @author skysper
  * @date 2022-01-17 23:27
  */
-public class Count_Vowels_Permutation_1220 {
+public class CountVowelsPermutation_1220 {
 
     /**
      * 使用递归的方式难以计算出最终答案

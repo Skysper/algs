@@ -5,7 +5,7 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * 打印帮助类
- * @author wupengfei
+ * @author skysper
  */
 public class Printer {
 

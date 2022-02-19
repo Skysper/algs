@@ -8,73 +8,55 @@ package com.skysper.common;
  */
 public class Trie {
 
-    private boolean ends;
+    public static class Node {
+        boolean end;
+        Node[] nexts;
+        public Node() {
+            this.end = false;
+            this.nexts = new Node[26];
+        }
+    }
 
-    private Trie[] tries;
-
+    Node head;
     public Trie() {
-        ends = false;
-        tries = new Trie[26];
+        head = new Node();
     }
 
     public void insert(String word) {
-        char[] array = word.toCharArray();
-
-        int length = array.length;
-        int i = 0;
-        Trie node = this;
-        while(i < length) {
-            char c = array[i];
-            if(node.tries[c - 'a'] == null) {
-                Trie newNode = new Trie();
-                node.tries[c-'a'] = newNode;
-                if( i == length - 1) {
-                    newNode.ends = true;
-                }
-                node = newNode;
-            } else {
-                node = node.tries[c - 'a'];
-                if( i == length - 1) {
-                    node.ends = true;
-                }
-            }
-            i++;
+        char[] array =word.toCharArray();
+        Node cur = head;
+        for(int i = 0; i < array.length; i ++) {
+            int index = array[i] - 'a';
+            Node node = cur.nexts[index] != null ? cur.nexts[index] : new Node();
+            cur.nexts[index] = node;
+            cur = node;
         }
+        cur.end = true;
     }
 
     public boolean search(String word) {
         char[] array = word.toCharArray();
-        Trie node = this;
-
-        int i = 0;
-        while( i < array.length) {
-            char c = array[i];
-            if(node.tries[c - 'a'] == null) {
+        Node cur = head;
+        for(int i = 0; i < array.length; i ++) {
+            int index = array[i] - 'a';
+            if(cur.nexts[index] == null) {
                 return false;
-            } else {
-                node = node.tries[c - 'a'];
             }
-            i++;
+            cur = cur.nexts[index];
         }
-
-        return node!= null && node.ends;
+        return cur.end;
     }
 
     public boolean startsWith(String prefix) {
-        char[] array = prefix.toCharArray();
-
-        Trie node =this;
-
-        int i = 0;
-        while(i < array.length) {
-            char c = array[i];
-            if(node.tries[c - 'a'] == null) {
+        char[] array =prefix.toCharArray();
+        Node cur = head;
+        for(int i = 0; i < array.length; i ++) {
+            int index = array[i] - 'a';
+            if(cur.nexts[index] == null) {
                 return false;
             }
-            node = node.tries[c - 'a'];
-            i++;
+            cur = cur.nexts[index];
         }
-        return node != null;
+        return true;
     }
-
 }

@@ -61,8 +61,7 @@ public class RussianDollEnvelopes_354 {
                 return Integer.compare(a.w, b.w);
             }
         });
-
-        printArray(nodeList);
+        //排序后，抽象为最长递减子序列的问题
         int length = nodeList.size();
         int[] dp = new int[length];
         int[] ends = new int[length];
@@ -77,7 +76,7 @@ public class RussianDollEnvelopes_354 {
 
             int l = 0;
             int r = right;
-
+            //二分查找大于等于h最左侧的值
             while(l <= r) {
                 int mid = (l + r) / 2;
                 if(ends[mid] >= h) {
@@ -94,15 +93,6 @@ public class RussianDollEnvelopes_354 {
 
         return right + 1;
 
-    }
-
-    public static void printArray(List array) {
-        System.out.print("[");
-        for (Object item : array) {
-            System.out.print((Node)item);
-            System.out.print(" ");
-        }
-        System.out.println("]");
     }
 
     public static void main(String[] args) {

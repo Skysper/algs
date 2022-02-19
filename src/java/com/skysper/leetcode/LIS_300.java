@@ -39,7 +39,7 @@ public class LIS_300 {
             int n = nums[i];
             int l = 0;
             int r = right;
-            //二分查找大于n最左侧的值
+            //二分查找大于等于n最左侧的值
             while(l <= r) {
                 int mid = (l + r) / 2;
                 if(ends[mid] >= n) {

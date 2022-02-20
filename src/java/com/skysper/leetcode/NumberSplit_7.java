@@ -11,6 +11,8 @@ public class NumberSplit_7 {
      * @return
      */
     public int reverse(int x) {
+        StringBuilder sg;
+
         boolean neg = x < 0;
         x = neg ? x : -x;
         int res = 0;

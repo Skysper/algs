@@ -25,6 +25,13 @@ package com.skysper.leetcode;
  */
 public class RangeSumCount_327 {
 
+    /**
+     * 使用归并算法进行解决
+     * @param nums
+     * @param lower
+     * @param upper
+     * @return
+     */
     public int countRangeSum(int[] nums, int lower, int upper) {
         if (nums == null || nums.length == 0) {
             return 0;
@@ -55,6 +62,8 @@ public class RangeSumCount_327 {
         long[] help = new long[right - left + 1];
 
         int ans = 0;
+        //记忆化处理，根据右侧值的大小排序，可以复用窗体范围
+        //降低复杂度为O(n)
         int windowL = left;
         int windowR = left;
         for (int i = mid + 1; i <= right; i++) {

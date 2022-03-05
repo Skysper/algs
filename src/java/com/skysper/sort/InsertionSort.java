@@ -8,7 +8,10 @@ import com.skysper.util.Printer;
  */
 public class InsertionSort {
 
-
+    /**
+     * 有稳定性
+     * @param array
+     */
     public void sort(int[] array) {
         if(array.length <= 1) {
             return;

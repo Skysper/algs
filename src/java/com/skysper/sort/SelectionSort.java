@@ -9,6 +9,10 @@ import com.skysper.util.Printer;
  */
 public class SelectionSort {
 
+    /**
+     * 无稳定性
+     * @param arr
+     */
     public static void sort(int[] arr) {
 
         if(arr == null || arr.length < 2) {
@@ -22,6 +26,7 @@ public class SelectionSort {
                     minIndex = j;
                 }
             }
+            //直接改变相对顺序，当前不是最小的可能放到了最后
             swap(arr, i, minIndex);
         }
 

@@ -8,8 +8,10 @@ import com.skysper.util.Printer;
  */
 public class BubbleSort {
 
-
-
+    /**
+     * 有稳定性
+     * @param array
+     */
     public static void sort(int[] array) {
 
         for (int i = array.length - 1; i  > 0; i--) {

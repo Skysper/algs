@@ -12,6 +12,10 @@ import java.util.concurrent.ThreadLocalRandom;
  */
 public class QuickSort {
 
+    /**
+     * 无稳定性
+     * @param arr
+     */
     public static void sort(int[] arr) {
         if(arr == null || arr.length < 2) {
             return;
@@ -118,13 +122,21 @@ public class QuickSort {
             return left;
         }
         int less = left - 1;
+        /**
+         * 随机选择改变相对顺序（稳定性）
+         */
         int random = ThreadLocalRandom.current().nextInt(left, right + 1);
         SortUtil.swap(arr, random, right);
         for(int i = left; i < right; i++) {
             if(arr[i] < arr[right]) {
+                //也会改变相对顺序
+                //这种交换会改变相对词序
+                // 1 5 7 2 4 4 3
+                // 5 <-> 2 交换 5、7相对顺序改变
                 SortUtil.swap(arr, i, ++less);
             }
         }
+        //也会改变相对顺序
         SortUtil.swap(arr, ++less, right);
         return less;
     }

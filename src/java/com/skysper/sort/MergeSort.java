@@ -12,6 +12,10 @@ import java.util.Arrays;
  */
 public class MergeSort {
 
+    /**
+     * 有稳定性
+     * @param arr
+     */
     public static void sort(int[] arr) {
 
         process(arr, 0, arr.length - 1);

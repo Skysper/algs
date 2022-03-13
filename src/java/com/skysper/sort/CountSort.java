@@ -6,6 +6,7 @@ import com.skysper.util.Printer;
 import java.util.Arrays;
 
 /**
+ * 桶排序/计数排序
  * @author skysper
  * @date 2022-03-05 09:34
  */
@@ -16,7 +17,10 @@ public class CountSort {
      * @param arr
      */
     public static void sort(int[] arr) {
-
+        if(arr.length <= 1) {
+            return;
+        }
+        
         int[] help = new int[100];
         for(int i = 0; i < arr.length; i++) {
             help[arr[i]]++;

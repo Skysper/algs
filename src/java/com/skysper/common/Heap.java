@@ -1,7 +1,6 @@
 package com.skysper.common;
 
 import com.skysper.sort.SortUtil;
-import com.skysper.util.Printer;
 
 /**
  * 默认使用小根堆
@@ -44,8 +43,6 @@ public class Heap {
             c = p;
             p = (c - 1) / 2;
         }
-        Printer.printArray(array);
-        System.out.println("========");
     }
 
     private void heapify() {

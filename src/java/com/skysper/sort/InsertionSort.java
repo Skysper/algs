@@ -3,6 +3,7 @@ package com.skysper.sort;
 import com.skysper.util.Printer;
 
 /**
+ * 插入排序
  * @author sksyper
  * @date 2022-02-28 13:01
  */

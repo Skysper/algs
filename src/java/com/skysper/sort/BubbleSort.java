@@ -13,6 +13,9 @@ public class BubbleSort {
      * @param array
      */
     public static void sort(int[] array) {
+        if(array.length <= 1) {
+            return;
+        }
 
         for (int i = array.length - 1; i  > 0; i--) {
             for (int j = 0; j < i; j++) {

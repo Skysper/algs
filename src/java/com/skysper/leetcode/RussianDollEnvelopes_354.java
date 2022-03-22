@@ -2,6 +2,7 @@ package com.skysper.leetcode;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
 
 /**
@@ -65,6 +66,10 @@ public class RussianDollEnvelopes_354 {
         int length = nodeList.size();
         int[] dp = new int[length];
         int[] ends = new int[length];
+
+        //dp的问题解决方式
+        // 3、2、4、1、7、6、9
+        // 1、1、2、1、3、3、4
 
         int right = 0;
         ends[0] = nodeList.get(0).h;

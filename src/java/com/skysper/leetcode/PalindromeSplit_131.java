@@ -38,6 +38,7 @@ public class PalindromeSplit_131 {
 
     public void process(char[] array, int index, List<List<String>> list, List<String> temp) {
         if(index == array.length) {
+            //copy数据并添加
             list.add(new ArrayList<>(temp));
             return;
         }

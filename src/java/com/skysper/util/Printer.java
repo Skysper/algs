@@ -27,6 +27,20 @@ public class Printer {
         System.out.println("]");
     }
 
+
+    public static void printMatrix(int[][] array) {
+        System.out.println("[");
+        for (int[] item : array) {
+            System.out.print("[");
+            for(int n : item) {
+                System.out.print(n);
+                System.out.print(" ");
+            }
+            System.out.println("]");
+        }
+        System.out.println("]");
+    }
+
     public static void printArray(int[] array) {
         System.out.print("[");
         for (int item : array) {

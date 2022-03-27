@@ -1,7 +1,7 @@
 package com.skysper.leetcode;
 
 /**
- * @author wupengfei
+ * @author skysper
  * @date 2022-03-22 23:53
  */
 public class IslandCount_200 {

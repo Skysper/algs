@@ -21,7 +21,7 @@ package com.skysper.leetcode;
  * @author skysper
  * @date 2022-02-21 00:02
  */
-public class PickWater_42 {
+public class P_42_PickWater {
 
     public int trap(int[] height) {
         if(height.length <= 2) {
@@ -56,6 +56,31 @@ public class PickWater_42 {
         }
 
         return sum;
+    }
+
+
+    public int trap2(int[] height) {
+        int left = 0;
+        int right = height.length - 1;
+        int leftMax = height[left];
+        int rightMax = height[right];
+        left++;
+        right--;
+        int sum = 0;
+        while(left <= right) {
+            if(leftMax < rightMax) {
+                sum += Math.max(leftMax - height[left], 0);
+                leftMax = Math.max(leftMax, height[left]);
+                left++;
+            } else {
+                sum += Math.max(rightMax - height[right], 0);
+                rightMax = Math.max(rightMax, height[right]);
+                right--;
+            }
+        }
+
+        return sum;
+
     }
 
 
